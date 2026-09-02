@@ -1,6 +1,5 @@
-# 📚 API de Livros - Sistemas Web II
+# 📚 API de Livros - Sistemas Web II de Leonardo Zaia
 
-> *minha jornada do banco de dados à interface visual* 🚀
 
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=for-the-badge&logo=github)](https://github.com/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
