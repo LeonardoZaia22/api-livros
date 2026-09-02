@@ -1,39 +1,47 @@
-# API de Livros - Sistemas Web II
+# 📚 API de Livros - Sistemas Web II
 
-Este é o meu projeto desenvolvido para a disciplina de Sistemas Web II (SW-II), onde construo uma aplicação web completa para gerenciamento de livros. O projeto representa minha jornada de aprendizado desde o banco de dados até uma interface visual funcional.
+> *minha jornada do banco de dados à interface visual* 🚀
 
-## Sobre o Projeto
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=for-the-badge&logo=github)](https://github.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql)](https://www.mysql.com/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python)](https://python.org/)
 
-Este projeto é a minha atividade avaliativa do 3º Bimestre, onde aplico na prática todos os conceitos aprendidos em aula. Desenvolvi uma API RESTful utilizando FastAPI e MySQL, e construí uma interface web para interagir com o sistema de forma intuitiva.
+---
 
-### O que minha aplicação faz?
+## 🌟 Sobre o Projeto
+
+Este projeto é a minha **atividade avaliativa do 3º Bimestre** da disciplina de **Sistemas Web II (SW-II)**. Desenvolvi uma **API RESTful** utilizando **FastAPI** e **MySQL**, e construí uma interface web para interagir com o sistema de forma intuitiva.
+
+| 🏷️ | 📌 Informação |
+|-----|---------------|
+| **Disciplina** | Sistemas Web II |
+| **Bimestre** | 3º Bimestre |
+| **Tipo** | Atividade Avaliativa |
+| **Tecnologias** | FastAPI, MySQL, SQLAlchemy, HTML/CSS/JS |
+
+---
+
+## 🎯 O que minha aplicação faz?
 
 Minha aplicação permite gerenciar um acervo de livros com as seguintes informações:
-- ID único para identificação
-- Título do livro
-- Autor
-- Ano de publicação
-- Status de disponibilidade
 
-## Minha Jornada de Desenvolvimento
+| 🔹 | Campo | Descrição |
+|----|-------|-----------|
+| 🆔 | **ID único** | Identificação numérica do livro |
+| 📖 | **Título** | Nome do livro |
+| ✍️ | **Autor** | Quem escreveu a obra |
+| 📅 | **Ano de publicação** | Ano em que foi publicado |
+| ✅ | **Status de disponibilidade** | Disponível ou emprestado |
 
-### Etapa 1: Fundação do Projeto
-Comecei configurando todo o ambiente de desenvolvimento: instalei as dependências necessárias, criei o banco de dados `biblioteca_db` no MySQL via XAMPP e estabeleci a conexão entre Python e o banco. A primeira rota que criei foi a de saúde, para verificar se tudo estava funcionando.
+---
 
-### Etapa 2: Construindo o Coração da API
-Nesta fase, criei o modelo `Livro` com SQLAlchemy, desenvolvi os schemas para validação de dados e implementei as primeiras rotas: POST para cadastrar livros e GET para listar e consultar o acervo.
+## 🗺️ Minha Jornada de Desenvolvimento
 
-### Etapa 3: CRUD Completo
-Finalizei as operações fundamentais da API implementando as rotas PUT para atualização e DELETE para exclusão de livros. Também adicionei tratamento de erros para garantir que a API seja robusta e confiável.
+### 🏗️ Etapa 1: Fundação do Projeto
+> *Configurando o ambiente e a base de dados*
 
-### Etapa 4: Interface Visual
-A última etapa foi a mais emocionante: transformei minha API em uma aplicação web completa com HTML, CSS e JavaScript. Agora é possível cadastrar, listar, editar e excluir livros diretamente pelo navegador.
-
-## Tecnologias que Utilizei
-
-- **Backend**: Python com FastAPI
-- **Servidor**: Uvicorn
-- **Banco de Dados**: MySQL gerenciado pelo phpMyAdmin no XAMPP
-- **ORM**: SQLAlchemy com PyMySQL
-- **Frontend**: HTML, CSS e JavaScript
-- **Ferramentas**: VS Code e GitHub
+- ✅ Instalei as dependências necessárias
+- ✅ Criei o banco de dados `biblioteca_db` no MySQL via XAMPP
+- ✅ Estabeleci a conexão entre Python e o banco
+- ✅ Criei a rota de saúde (`/health`) para verificar se tudo estava funcionando
