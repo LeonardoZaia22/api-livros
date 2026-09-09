@@ -1,28 +1,24 @@
-from urllib.parse import quote_plus
+from collections.abc import Generator
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, sessionmaker
+from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 
 
 class Configuracoes(BaseSettings):
-    db_user: str = "root"
-    db_password: str = ""
+    db_user: str
+    db_password: str
     db_host: str = "localhost"
     db_port: int = 3306
-    db_name: str = "biblioteca_db"
+    db_name: str
 
-    model_config = SettingsConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        extra="ignore",
-    )
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
 configuracoes = Configuracoes()
 
 DATABASE_URL = (
-    f"mysql+pymysql://{configuracoes.db_user}:{quote_plus(configuracoes.db_password)}"
+    f"mysql+pymysql://{configuracoes.db_user}:{configuracoes.db_password}"
     f"@{configuracoes.db_host}:{configuracoes.db_port}/{configuracoes.db_name}"
 )
 
@@ -32,3 +28,12 @@ criar_sessao = sessionmaker(bind=mecanismo_banco, autoflush=False, autocommit=Fa
 
 class BaseBanco(DeclarativeBase):
     pass
+
+
+def obter_sessao_banco() -> Generator[Session, None, None]:
+    sessao_banco = criar_sessao()
+
+    try:
+        yield sessao_banco
+    finally:
+        sessao_banco.close()

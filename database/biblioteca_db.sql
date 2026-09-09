@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02/09/2026 às 20:44
+-- Tempo de geração: 09/09/2026 às 20:03
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,8 +20,51 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `biblioteca_db`
 --
-CREATE DATABASE IF NOT EXISTS `biblioteca_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `biblioteca_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `biblioteca_db`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `livros`
+--
+
+CREATE TABLE `livros` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `autor` varchar(120) NOT NULL,
+  `ano_publicacao` int(11) NOT NULL,
+  `disponivel` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `livros`
+--
+
+INSERT INTO `livros` (`id`, `titulo`, `autor`, `ano_publicacao`, `disponivel`) VALUES
+(1, 'O Hobbit', 'J. R. R. Tolkien', 1937, 1),
+(2, 'O Hobbit', 'J. R. R. Tolkien', 1937, 1);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `livros`
+--
+ALTER TABLE `livros`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ix_livros_id` (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `livros`
+--
+ALTER TABLE `livros`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Banco de dados: `phpmyadmin`
 --
@@ -278,7 +321,7 @@ CREATE TABLE `pma__userconfig` (
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2026-09-02 18:36:47', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"pt_BR\"}');
+('root', '2026-09-09 17:45:57', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"pt_BR\"}');
 
 -- --------------------------------------------------------
 
